@@ -4,17 +4,23 @@
   "description": "",
   "main": "gameserver.js",
   "scripts": {
-    "start:dev:login": "npx -y ts-node-dev --env-file=.env ./src/login-server",
+    "start:dev:login": "NODE_OPTIONS=--openssl-legacy-provider npx -y ts-node-dev --env-file=.env ./src/login-server",
     "start:dev:game": "npx -y ts-node-dev --env-file=.env ./src/game-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "5.16.2",
     "clockwok": "github:space2pacman/clockwok",
     "mongodb": "^6.5.0"
   },
   "devDependencies": {
     "@types/node": "20.14.10",
+    "prisma": "5.16.2",
     "typescript": "5.5.3"
+  },
+  "imports": {
+    "#database": "./src/database/index.ts",
+    "#utils": "./src/utils"
   }
 }
