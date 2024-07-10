@@ -4,12 +4,17 @@
   "description": "",
   "main": "gameserver.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev:login": "npx -y ts-node-dev ./src/login-server",
+    "start:dev:game": "npx -y ts-node-dev ./src/game-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "clockwok": "github:space2pacman/clockwok",
     "mongodb": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "typescript": "5.5.3"
   }
 }
